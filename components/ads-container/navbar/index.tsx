@@ -12,8 +12,15 @@ export default function CoNavbar() {
     return (
         <NavbarStyle id="myNavbar">
             <Container>
-                <FlexDiv justifyContent="space-between">
-                    <Button type="text"><TbBrandWhatsapp />تواصل معنا </Button>
+                <FlexDiv cstyle={`
+                    @media (max-width:767px){
+                            flex-direction: column-reverse;
+                            align-items: center;
+                    }
+                `} justifyContent="space-between">
+                    <Button type="text" onClick={() => {
+                        window.open("//api.whatsapp.com/send?phone=+972502885338&text=لقد أحببت خدمتك..")
+                    }}><TbBrandWhatsapp />تواصل معنا </Button>
                     <nav>
                         <Link href="#">
                             <a onClick={(e) => {
@@ -28,7 +35,15 @@ export default function CoNavbar() {
                                 e.preventDefault();
                                 router.push("/#myPhotos")
                             }}>
-                                بعض الصور عنا
+                                ألبوم الصور
+                            </a>
+                        </Link>
+                        <Link href="/">
+                            <a onClick={(e) => {
+                                e.preventDefault();
+                                router.push("/#myPhotos")
+                            }}>
+                                خدماتنا
                             </a>
                         </Link>
                         {/* <Link href="/">

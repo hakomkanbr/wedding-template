@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const BannerStyle = styled.div`
     height: 100vh;
+    @media (max-width:767px){
+          height: 60vh;
+    }
     .swiper{
         .swiper-wrapper{
             &:after{

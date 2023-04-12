@@ -46,11 +46,11 @@ function MyApp({ Component, pageProps: { session, ...pageProps }, }: AppPropsWit
   const Layout = centerLayouts[Component.layout ?? "Default"] ?? Component;
   const [queryClient] = React.useState(() => new QueryClient());
   const [width, setWidth] = useState<boolean>();
-  useEffect(() => {
-    if (window.innerWidth < 991) {
-      setWidth(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window.innerWidth < 991) {
+  //     setWidth(true);
+  //   }
+  // }, []);
 
   if (width) {
     return "شاشة جهازك يتم تجهيزها , يرجى الدخول من شاشة لابتوب"

@@ -8,6 +8,11 @@ export const NavbarStyle = styled.div`
     box-shadow: 2px 1px 59px -21px rgba(0,0,0,0.75);
     -webkit-box-shadow: 2px 1px 59px -21px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 1px 59px -21px rgba(0,0,0,0.75);
+    h1{
+            font-weight: bold;
+    font-family: ui-monospace;
+    font-size: 41px;
+    }
     .ant-btn{
         height: 45px;
         background: #00d4ff;
